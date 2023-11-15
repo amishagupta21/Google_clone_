@@ -5,7 +5,6 @@ const Link = [
     { url:'/search', text: "🔍 All" },
     { url: '/news', text: "🔍 News" },
     { url: '/images', text: "🔍 Images" }
-
 ]
 const Links = () => {
     return (
