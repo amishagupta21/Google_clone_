@@ -8,15 +8,17 @@ const Results = () => {
   const location = useLocation()
 
   useEffect(() => {
-    if(searchTerm){
-      if(location.pathname==='/videos'){
-         getResults(`?query=${searchTerm} videos`)
-      }
-      else{
-        getResults(`?query=${searchTerm}&num=40`)
+    // Disable ESLint warning for the next line
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    if (searchTerm) {
+      if (location.pathname === '/videos') {
+        getResults(`?query=${searchTerm} videos`);
+      } else {
+        getResults(`?query=${searchTerm}&num=40`);
       }
     }
-  }, [searchTerm,location.pathname])
+    // eslint-disable-next-line
+  }, [searchTerm, location.pathname]);
 
   if (isLoading) return <Loading />
   switch (location.pathname) {
