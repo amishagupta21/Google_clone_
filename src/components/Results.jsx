@@ -43,7 +43,6 @@ const Results = () => {
     case '/images':
       return (
         <div className="flex flex-wrap justify-center items-center">
-          {console.log("resp",results)}
           {results?.map(({ url, title,description }, index) => (
             <div key={index} className="md:w-2/5 w-full">
               <a href={url} target="_blank" rel="noreferrer">
