@@ -11,7 +11,7 @@ const Search = () => {
 
     useEffect(() => {
         if (debouncedValue) setSearchTerm(debouncedValue)
-    }, [debouncedValue])
+    }, [debouncedValue,setSearchTerm])
     return (
         <div className="relative sm:ml-48 md:ml-72 sm:-mt-10 mt-3">
             <input value={text} type="text" className="sm:w-64 w-48 h-12 dark:bg-gray-200 border rounded-full shadow-sm outline-none pl-6 pr-16 text-black hover:shadow-lg"
